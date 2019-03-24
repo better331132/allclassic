@@ -1,6 +1,6 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB FREE 4.7.3
+ * Version: MDB FREE 4.7.5
  *
  *
  * Copyright: Material Design for Bootstrap
@@ -1267,11 +1267,6 @@
   background: -webkit-linear-gradient(50deg, rgba(69, 202, 252, 0.9), rgba(48, 63, 159, 0.9)) !important;
   background: -o-linear-gradient(50deg, rgba(69, 202, 252, 0.9), rgba(48, 63, 159, 0.9)) !important;
   background: linear-gradient(40deg, rgba(69, 202, 252, 0.9), rgba(48, 63, 159, 0.9)) !important; }
-
-.dark-grey-text {
-  color: #4f4f4f !important; }
-  .dark-grey-text:hover, .dark-grey-text:focus {
-    color: #4f4f4f !important; }
 
 .hoverable {
   -webkit-box-shadow: none;
@@ -6604,7 +6599,6 @@ a.btn:not([href]):not([tabindex]):hover {
 
 .label-for-default-js {
   width: 100%;
-  height: -webkit-calc(2.25rem + 2px);
   height: calc(2.25rem + 2px); }
 
 .navbar {
@@ -6697,9 +6691,6 @@ a.btn:not([href]):not([tabindex]):hover {
     .navbar.navbar-light form .md-form .form-control::-webkit-input-placeholder {
       color: #000;
       font-weight: 300; }
-    .navbar.navbar-light form .md-form .form-control:-ms-input-placeholder {
-      color: #000;
-      font-weight: 300; }
     .navbar.navbar-light form .md-form .form-control::-ms-input-placeholder {
       color: #000;
       font-weight: 300; }
@@ -6737,9 +6728,6 @@ a.btn:not([href]):not([tabindex]):hover {
   .navbar.navbar-dark form .md-form .form-control {
     color: #fff; }
     .navbar.navbar-dark form .md-form .form-control::-webkit-input-placeholder {
-      color: #fff;
-      font-weight: 300; }
-    .navbar.navbar-dark form .md-form .form-control:-ms-input-placeholder {
       color: #fff;
       font-weight: 300; }
     .navbar.navbar-dark form .md-form .form-control::-ms-input-placeholder {
@@ -6796,7 +6784,9 @@ a.btn:not([href]):not([tabindex]):hover {
     border-radius: 0.125rem;
     background-color: #eee; }
   .pagination .page-item .page-link:focus {
-    background-color: transparent; }
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 .pagination.pagination-lg .page-item .page-link {
   font-size: 1rem; }
@@ -7573,6 +7563,20 @@ body.scrollable {
     .md-form textarea.md-textarea.form-control-sm.invalid + label:after,
     .md-form textarea.md-textarea.form-control-sm:focus.invalid + label:after {
       top: 3.1rem; }
+  .md-form > input[type=date]:not(.browser-default) + label {
+    -webkit-transform: translateY(-27px) scale(0.8);
+    -ms-transform: translateY(-27px) scale(0.8);
+    transform: translateY(-27px) scale(0.8);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0; }
+  .md-form > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label,
+  .md-form > input[type=time]:not(.browser-default) + label {
+    -webkit-transform: translateY(-25px);
+    transform: translateY(-25px);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    font-size: .8rem; }
   .md-form .was-validated input[type=text]:valid + label {
     color: #00c851 !important; }
   .md-form .was-validated input[type=text]:invalid + label {
@@ -7614,7 +7618,6 @@ body.scrollable {
     .md-form .prefix ~ input,
     .md-form .prefix ~ textarea {
       margin-left: 2.5rem;
-      width: -webkit-calc(100% - 2.5rem);
       width: calc(100% - 2.5rem); }
     .md-form .prefix ~ label {
       margin-left: 2.5rem; }
@@ -7652,7 +7655,6 @@ body.scrollable {
     .md-form.form-lg .prefix ~ input,
     .md-form.form-lg .prefix ~ textarea {
       margin-left: 3rem;
-      width: -webkit-calc(100% - 3rem);
       width: calc(100% - 3rem); }
     .md-form.form-lg .prefix ~ label {
       margin-left: 3rem; }
@@ -7670,7 +7672,6 @@ body.scrollable {
     .md-form.form-sm .prefix ~ input,
     .md-form.form-sm .prefix ~ textarea {
       margin-left: 2rem;
-      width: -webkit-calc(100% - 2rem);
       width: calc(100% - 2rem); }
     .md-form.form-sm .prefix ~ label {
       margin-left: 2rem; }
@@ -7921,6 +7922,24 @@ body.scrollable {
         top: 2.75rem;
         left: 0;
         position: absolute; }
+    .md-form.md-outline > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label,
+    .md-form.md-outline > input[type=time]:not(.browser-default) + label {
+      -webkit-transform: translateY(-17px);
+      transform: translateY(-17px);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      background: #fff;
+      font-weight: 500;
+      padding-right: 5px;
+      padding-left: 5px;
+      font-size: 11px;
+      left: 8px; }
+    .md-form.md-outline > input[type]:-webkit-autofill:not(.browser-default):not([type="search"]) + label.active,
+    .md-form.md-outline > input[type=time]:not(.browser-default) + label.active {
+      -webkit-transform: translateY(-17px);
+      transform: translateY(-17px);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
     .md-form.md-outline .form-control {
       padding: .375rem .75rem; }
     .md-form.md-outline label {
@@ -7959,7 +7978,6 @@ body.scrollable {
       .md-form.md-outline.form-lg .prefix ~ input,
       .md-form.md-outline.form-lg .prefix ~ textarea {
         margin-left: 2.2rem;
-        width: -webkit-calc(100% - 2.2rem);
         width: calc(100% - 2.2rem); }
       .md-form.md-outline.form-lg .prefix ~ label {
         margin-left: 2.2rem; }
@@ -7981,7 +7999,6 @@ body.scrollable {
       .md-form.md-outline.form-sm .prefix ~ input,
       .md-form.md-outline.form-sm .prefix ~ textarea {
         margin-left: 1.6rem;
-        width: -webkit-calc(100% - 1.6rem);
         width: calc(100% - 1.6rem); }
       .md-form.md-outline.form-sm .prefix ~ label {
         margin-left: 1.6rem; }
@@ -8000,7 +8017,6 @@ body.scrollable {
       .md-form.md-outline .prefix ~ input,
       .md-form.md-outline .prefix ~ textarea {
         margin-left: 2rem;
-        width: -webkit-calc(100% - 2rem);
         width: calc(100% - 2rem); }
       .md-form.md-outline .prefix ~ label {
         margin-left: 2rem; }
@@ -8008,6 +8024,154 @@ body.scrollable {
         margin-left: 2.1rem; }
     .md-form.md-outline .character-counter {
       margin-top: -.5rem; }
+  .md-form.md-ver {
+    position: relative;
+    padding-top: 16px;
+    margin-bottom: 16px; }
+    .md-form.md-ver input[type=text]:focus,
+    .md-form.md-ver input[type=password]:focus,
+    .md-form.md-ver input[type=email]:focus,
+    .md-form.md-ver input[type=url]:focus,
+    .md-form.md-ver input[type=time]:focus,
+    .md-form.md-ver input[type=date]:focus,
+    .md-form.md-ver input[type=datetime-local]:focus,
+    .md-form.md-ver input[type=tel]:focus,
+    .md-form.md-ver input[type=number]:focus,
+    .md-form.md-ver input[type=search-md]:focus,
+    .md-form.md-ver input[type=search]:focus,
+    .md-form.md-ver textarea:focus {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-bottom-color: rgba(0, 0, 0, 0.12); }
+      .md-form.md-ver input[type=text]:focus ~ label,
+      .md-form.md-ver input[type=password]:focus ~ label,
+      .md-form.md-ver input[type=email]:focus ~ label,
+      .md-form.md-ver input[type=url]:focus ~ label,
+      .md-form.md-ver input[type=time]:focus ~ label,
+      .md-form.md-ver input[type=date]:focus ~ label,
+      .md-form.md-ver input[type=datetime-local]:focus ~ label,
+      .md-form.md-ver input[type=tel]:focus ~ label,
+      .md-form.md-ver input[type=number]:focus ~ label,
+      .md-form.md-ver input[type=search-md]:focus ~ label,
+      .md-form.md-ver input[type=search]:focus ~ label,
+      .md-form.md-ver textarea:focus ~ label {
+        top: 0;
+        opacity: 1;
+        color: #8e44ad;
+        font-size: 12px; }
+        .md-form.md-ver input[type=text]:focus ~ label:after,
+        .md-form.md-ver input[type=password]:focus ~ label:after,
+        .md-form.md-ver input[type=email]:focus ~ label:after,
+        .md-form.md-ver input[type=url]:focus ~ label:after,
+        .md-form.md-ver input[type=time]:focus ~ label:after,
+        .md-form.md-ver input[type=date]:focus ~ label:after,
+        .md-form.md-ver input[type=datetime-local]:focus ~ label:after,
+        .md-form.md-ver input[type=tel]:focus ~ label:after,
+        .md-form.md-ver input[type=number]:focus ~ label:after,
+        .md-form.md-ver input[type=search-md]:focus ~ label:after,
+        .md-form.md-ver input[type=search]:focus ~ label:after,
+        .md-form.md-ver textarea:focus ~ label:after {
+          visibility: visible;
+          width: 100%;
+          left: 0; }
+    .md-form.md-ver input[type=text]:focus:not([readonly]),
+    .md-form.md-ver input[type=password]:focus:not([readonly]),
+    .md-form.md-ver input[type=email]:focus:not([readonly]),
+    .md-form.md-ver input[type=url]:focus:not([readonly]),
+    .md-form.md-ver input[type=time]:focus:not([readonly]),
+    .md-form.md-ver input[type=date]:focus:not([readonly]),
+    .md-form.md-ver input[type=datetime-local]:focus:not([readonly]),
+    .md-form.md-ver input[type=tel]:focus:not([readonly]),
+    .md-form.md-ver input[type=number]:focus:not([readonly]),
+    .md-form.md-ver input[type=search-md]:focus:not([readonly]),
+    .md-form.md-ver input[type=search]:focus:not([readonly]),
+    .md-form.md-ver textarea:focus:not([readonly]) {
+      border-color: #4285f4;
+      -webkit-box-shadow: inset 0px 0px 0px 1px #4285f4;
+      box-shadow: inset 0px 0px 0px 1px #4285f4; }
+      .md-form.md-ver input[type=text]:focus:not([readonly]) + label,
+      .md-form.md-ver input[type=password]:focus:not([readonly]) + label,
+      .md-form.md-ver input[type=email]:focus:not([readonly]) + label,
+      .md-form.md-ver input[type=url]:focus:not([readonly]) + label,
+      .md-form.md-ver input[type=time]:focus:not([readonly]) + label,
+      .md-form.md-ver input[type=date]:focus:not([readonly]) + label,
+      .md-form.md-ver input[type=datetime-local]:focus:not([readonly]) + label,
+      .md-form.md-ver input[type=tel]:focus:not([readonly]) + label,
+      .md-form.md-ver input[type=number]:focus:not([readonly]) + label,
+      .md-form.md-ver input[type=search-md]:focus:not([readonly]) + label,
+      .md-form.md-ver input[type=search]:focus:not([readonly]) + label,
+      .md-form.md-ver textarea:focus:not([readonly]) + label {
+        top: 0;
+        opacity: 1;
+        color: #8e44ad;
+        font-size: 12px; }
+        .md-form.md-ver input[type=text]:focus:not([readonly]) + label:after,
+        .md-form.md-ver input[type=password]:focus:not([readonly]) + label:after,
+        .md-form.md-ver input[type=email]:focus:not([readonly]) + label:after,
+        .md-form.md-ver input[type=url]:focus:not([readonly]) + label:after,
+        .md-form.md-ver input[type=time]:focus:not([readonly]) + label:after,
+        .md-form.md-ver input[type=date]:focus:not([readonly]) + label:after,
+        .md-form.md-ver input[type=datetime-local]:focus:not([readonly]) + label:after,
+        .md-form.md-ver input[type=tel]:focus:not([readonly]) + label:after,
+        .md-form.md-ver input[type=number]:focus:not([readonly]) + label:after,
+        .md-form.md-ver input[type=search-md]:focus:not([readonly]) + label:after,
+        .md-form.md-ver input[type=search]:focus:not([readonly]) + label:after,
+        .md-form.md-ver textarea:focus:not([readonly]) + label:after {
+          visibility: visible;
+          width: 100%;
+          left: 0; }
+    .md-form.md-ver label {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+      width: 100%;
+      font-weight: 300;
+      opacity: 0.5;
+      cursor: text;
+      -webkit-transition: 0.2s ease all;
+      -o-transition: 0.2s ease all;
+      transition: 0.2s ease all;
+      margin: 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .md-form.md-ver label:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 45%;
+        height: 2px;
+        width: 10px;
+        visibility: hidden;
+        background-color: #8e44ad;
+        -webkit-transition: 0.2s ease all;
+        -o-transition: 0.2s ease all;
+        transition: 0.2s ease all; }
+    .md-form.md-ver .form-control {
+      position: relative;
+      z-index: 1;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      border-width: 0 0 1px;
+      border-bottom-color: rgba(0, 0, 0, 0.25);
+      height: auto;
+      padding: 3px 0 5px; }
+      .md-form.md-ver .form-control:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-bottom-color: rgba(0, 0, 0, 0.12); }
+        .md-form.md-ver .form-control:focus ~ label {
+          top: 0;
+          opacity: 1;
+          color: #8e44ad;
+          font-size: 12px; }
+          .md-form.md-ver .form-control:focus ~ label:after {
+            visibility: visible;
+            width: 100%;
+            left: 0; }
 
 .md-form .form-control.is-invalid,
 .was-validated .md-form .form-control:invalid {
@@ -8393,7 +8557,6 @@ ul.stepper {
           content: "";
           position: absolute;
           width: 1px;
-          height: -webkit-calc(100% - 40px);
           height: calc(100% - 40px);
           left: 2.19rem;
           top: 3.75rem; } }
@@ -8472,7 +8635,6 @@ ul.stepper {
       content: "";
       position: absolute;
       width: 1px;
-      height: -webkit-calc(100% - 40px);
       height: calc(100% - 40px);
       left: 2.19rem;
       top: 3.44rem;
